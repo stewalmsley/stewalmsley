@@ -9,7 +9,7 @@ var whence = ["When?","Whence?"];
 var when = document.getElementById("when");
 var howcome = ["Why?","Howcome?"];
 var why = document.getElementById("why");
-var img = ["leesoph.jpg","leesoph3.jpg"];
+var img = ["leesoph4.jpg","leesoph2.jpg"];
 var imgsw = document.getElementById("imgsw");
 
 function changetext() {

@@ -1,5 +1,5 @@
 var text = [["Who?","Whom?"],["What?","Whatst?"],["Where?", "Wherefore?"],["When?","Whence?"],
-			["Why?","Howcome?"],["balloons.png","leesoph4.jpg"],["toering.jpg","sophscared.jpg"],
+			["Why?","Howcome?"],["faceswap.jpg","balloons.png"],["600","400"],["toering.jpg","sophscared.jpg"],
 			["400","450"],["True Love","Became Inevitable"]];
 var who = document.getElementById("who");
 var what = document.getElementById("what");
@@ -28,9 +28,10 @@ function changetext() {
   when1.innerHTML = text[3][counter];
   why1.innerHTML = text[4][counter];
   imgsw1.src = text[5][counter];
-  imgsw.src = text[6][counter];
-  imgsw.width = text[7][counter];
-  inev.innerHTML = text[8][counter];
+  imgsw1.width = text[6][counter];
+  imgsw.src = text[7][counter];
+  imgsw.width = text[8][counter];
+  inev.innerHTML = text[9][counter];
   counter++;
   if (counter >= text[0].length) {
     counter = 0;
