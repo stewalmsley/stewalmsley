@@ -1,8 +1,8 @@
 const text = [["Who?","Whom?"],["What?","Whatst?"],["Where?", "Wherefore?"],["When?","Whence?"],
       ["Why?","Howcome?"]];
+const width = [["400","0"],["0","400"]];
 const existing = document.getElementsByClassName("switch");
-const images = [["leesoph4.jpg","leesoph2.jpg"]];
-const imgsw = document.getElementsByClassName("imgsw");
+const widen = document.getElementsByClassName("widen");
 let num = 0;
 let counter = 0;
 const chgtext = () => {
@@ -13,20 +13,20 @@ const chgtext = () => {
     }
     while (num < existing.length);
   }
-const chgimg = () => {
+const chgwidth = () => {
   num = 0;
     do {
-      imgsw[num].src = images[num][counter];
+      widen[num].width = width[num][counter];
       num ++;
     }
-    while (num < images.length);
-}
+    while (num < widen.length);
+  }
 const change = () => {
   counter ++ ;
   if (counter >= text[0].length) {
     counter = 0;
   }
     chgtext();
-    chgimg();
+    chgwidth();
 }
 setInterval(change,3000);
