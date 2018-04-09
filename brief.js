@@ -1,28 +1,32 @@
-var whom = ["Who?","Whom?"];
-var who = document.getElementById("who");
-var counter = 0;
-var whatst = ["What?","Whatst?"];
-var what = document.getElementById("what");
-var wherefore = ["Where?", "Wherefore?"];
-var where = document.getElementById("where");
-var whence = ["When?","Whence?"];
-var when = document.getElementById("when");
-var howcome = ["Why?","Howcome?"];
-var why = document.getElementById("why");
-var img = ["leesoph4.jpg","leesoph2.jpg"];
-var imgsw = document.getElementById("imgsw");
-
-function changetext() {
-  who.innerHTML = whom[counter];
-  what.innerHTML = whatst[counter];
-  where.innerHTML = wherefore[counter];
-  when.innerHTML = whence[counter];
-  why.innerHTML = howcome[counter];
-  imgsw.src = img[counter];
-  counter++;
-  if (counter >= whom.length) {
-    counter = 0;
-    // clearInterval(inst); // uncomment this if you want to stop refreshing after one cycle
+const text = [["Who?","Whom?"],["What?","Whatst?"],["Where?", "Wherefore?"],["When?","Whence?"],
+      ["Why?","Howcome?"]];
+const existing = document.getElementsByClassName("switch");
+const images = [["leesoph4.jpg","leesoph2.jpg"]];
+const imgsw = document.getElementsByClassName("imgsw");
+let num = 0;
+let counter = 0;
+const chgtext = () => {
+      num = 0;
+      do {
+      existing[num].innerText = text[num][counter];
+      num ++;
+    }
+    while (num < existing.length);
   }
+const chgimg = () => {
+  num = 0;
+    do {
+      imgsw[num].src = images[num][counter];
+      num ++;
+    }
+    while (num < images.length);
 }
-setInterval(changetext,3000);
+const change = () => {
+  counter ++ ;
+  if (counter >= text[0].length) {
+    counter = 0;
+  }
+    chgtext();
+    chgimg();
+}
+setInterval(change,3000);
