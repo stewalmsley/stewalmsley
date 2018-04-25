@@ -1,5 +1,5 @@
 body {
-	background-color: rgba(0,200,0,0.2);
+	background-color: rgba(0,200,0,0.15);
 	font-family: 'Barlow', san-serif;
 	font-size: 240%;
 	margin-left: 10px;
@@ -20,6 +20,14 @@ h1 {
 .code {
 	color: rgb(145,145,145);
 	}
+
+.hide {
+	color:rgba(0,200,0,0);
+}
+
+.error2 {
+	color: rgb(145,145,145);
+}
 
 #images img {
 	margin: 0% 0% 0% 0%;
@@ -86,6 +94,16 @@ footer {
 	color: rgb(200,0,0);
 	font-weight: bold;
 	}
+
+.maplink {
+	color: rgb(0,100,0);
+	font-weight: lighter;
+}
+
+.transport {
+	color: rgb(110,110,110);
+	font-style: italic;
+}
 
 .while {
 	margin-left: 0px;

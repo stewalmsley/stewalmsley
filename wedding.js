@@ -3,6 +3,7 @@ const text = [["Who?","Whom?"],["What?","Whatst?"],["Where?", "Wherefore?"],["Wh
       ["Why?","Howcome?"],["True Love","Became Inevitable"],
       ];
 const width = [["400","0"],["0","450"],["600","0"],["0","400"]];
+const appear = document.getElementsByClassName("hidden");
 const existing = document.getElementsByClassName("switch");
 const widen = document.getElementsByClassName("widen");
 let num = 0;
@@ -15,6 +16,14 @@ const chgtext = () => {
     }
     while (num < existing.length);
   }
+const chgfont = () => {
+  num = 0;
+    do {
+      appear[num].classList.toggle("hide");
+      num ++;
+    }
+    while (num < appear.length);
+}
 const chgwidth = () => {
   num = 0;
     do {
@@ -30,6 +39,7 @@ const change = () => {
   }
     chgtext();
     chgwidth();
+    chgfont();
 }
 setInterval(change,3000);
 
